@@ -13,12 +13,47 @@
         label           {font-weight: bold;}
         input, select   {margin-bottom: 10px;}
         form            {width: 30%; padding: 20px;}
+        #empForm        {width: 30%; padding: 20px;}
+        #department     {width: 40%;}
     </style>
 </head>
-<body class="mt-2 ml-4">
+<body class="mt-2 ms-4">
     <h1>Employee Management System</h1>
-    <form id="empForm">
-     
+    <form id="empForm" class="form-control border-warning rounded-0 bg-light">
+        <div class="mb-3 mt-2">
+            <label for="id" class="form-label">8-Digit Employee ID</label>
+            <input type="text" class="form-control rounded-1 w-50" id="id" 
+            required placeholder="23423424" maxlength="8">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control rounded-1 w-50" id="name"
+            required placeholder="Cookie Monster">
+        </div>
+        <div class="mb-3">
+            <label for="ext" class="form-label">4-Digit Extension</label>
+            <input type="text" class="form-control rounded-1 w-50" id="ext"
+            required placeholder="4444" maxlength="4">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control rounded-1 w-50" id="email"
+            required placeholder="cm@sesamestreet.com">
+        </div>
+        <div class="mb-3">
+            <label for="department" class="form-label">Department</label>
+            <select type="select" class="form-select rounded-1" id="department"
+            required>
+                <option selected>Engineering</option>
+                <option value="1">Administrative</option>
+                <option value="2">Executive</option>
+                <option value="3">Marketing</option>
+                <option value="4">Quality Assurance</option>
+                <option value="5">Sales</option>
+            </select>
+        </div>
+        <input type="submit" class="btn btn-success mt-3 border-light" id="submit"
+        value="Add Employee">
     </form>
 </body>
 </html>
